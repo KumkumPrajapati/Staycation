@@ -118,3 +118,29 @@ text-decoration: underline;
     height: 400px;
     width: 80pvh;
 }
+@media only screen and (max-width: 768px) {
+	.navbar {
+		grid-template-columns: 1fr;
+	}
+	.navbar-items {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+    .listings-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .listing-card {
+      padding: 0.5em;
+    }
+    .listing-card img {
+      height: 10em;
+    }
+  }
+  
