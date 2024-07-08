@@ -17,42 +17,53 @@
      border-radius: 25px;
      padding: 0.5rem 3rem 0.5rem 3rem;
   }
-  
+  @media only screen and (max-width: 768px) {
+    .search-inp{
+      width: 5rem ;
+    }
+    .btn-search{
+      width: 3rem;
+    }
+    .navbar{
+      background-color: black;
+      color:white;
+    }
+  }
 </style>
 
+
+
+
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"> <i class="fa-regular fa-compass"></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Explore</a>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"> <i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+    
+      <div class="navbar-nav ms-auto ">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" aria-label="Search">
+          <button class="btn btn-search" type="submit" > <i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
 
-
-        
-
-       
-        <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" aria-label="Search">
-            <button class="btn btn-search" type="submit" > <i class="fa-solid fa-magnifying-glass"></i>Search</button>
-          </form>
-        </div>
-
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new"><i>Add Your home</i></a>
-         <% if(!currUser) {%>
-          <a class="nav-link "  href="/signup"> <b>Sign Up</b></a>
-          <a class="nav-link" href="/login"><b>Login</b></a>
-          <% } %>
-          <% if(currUser) {%>
-          <a class="nav-link" href="/logout"><b>Logout</b></a>
-          <% } %>
-        </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="/listings/new"><i>Add Your home</i></a>
+       <% if(!currUser) {%>
+        <a class="nav-link "  href="/signup"> <b>Sign Up</b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+        <% if(currUser) {%>
+        <a class="nav-link" href="/logout"><b>Logout</b></a>
+        <% } %>
       </div>
     </div>
+  </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
