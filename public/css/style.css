@@ -113,9 +113,76 @@ text-decoration: underline;
     padding-left: 0;
     padding-right: 0;
 }
+@media (max-width: 767px){
+    .show-main{
+        display: contents !important;
+        width: auto !important;
+        margin: none;
+        padding: none;
+        /* position: relative; */
+        max-width: 650px !important;
+    }
+    .show-main>div{
+        /* align-items: center; */
+        width: 95%;
+        /* position: relative !important;
+        left: 10px !important; */
+        margin: auto auto !important;
+    }
+    
+    }
 
 #map{
     height: 400px;
     width: 80pvh;
 }
+
+/* Heart Icon */
+.like-button .heart-icon {
+    height: 100px;
+    width: 100px;
+    background: url("../image/heart.png");
+    background-position: left;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .like-button .heart-icon.liked {
+    animation: like-anim 0.7s steps(28) forwards;
+  }
+  
+  @keyframes like-anim {
+    to {
+      background-position: right;
+    }
+  }
+
+.like-button .heart-bg {
+    background: rgba(255, 192, 200, 0);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease;
+  }
+  
+  .like-button .heart-bg:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-button .likes-amount {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #888;
+    font-weight: 900;
+    margin-left: 6px;
+  }
+  
 
