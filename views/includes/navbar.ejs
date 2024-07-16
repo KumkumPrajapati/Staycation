@@ -1,12 +1,12 @@
 <style>
   .search-btn {
-    background-color:#683193;
+    background-color:#fe424d;
     color: #fff;
     border-radius: 25px;
     padding: 0 1rem;
   }
   .search-btn:hover {
-    background-color: #ac47fa;
+    background-color: #fe424d;
     color: #fff;
   }
   .search-btn i {
@@ -20,18 +20,18 @@
 </style>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/listings"><img  src="https://res.cloudinary.com/danoxgcb8/image/upload/v1698837544/wanderlust_DEV/namaste_1_scnrpm.png" width="41px" style="margin-right:12px; margin-bottom: 10px;" alt="logo"><b style="display: inline-block; color: #683193; font-size: 1.5rem; line-height: 1.2rem; margin-top: 20px; font-family:Arial, Helvetica, sans-serif;">&nbsp;Namaste Yatra</b></a>
+        <a class="navbar-brand" href="/listings"> <i class="fa-regular fa-compass"></i></a>
         <button class="navbar-toggler" 
           type="button" 
           data-bs-toggle="collapse" 
           data-bs-target="#navbarNavAltMarkup" 
         >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <!-- <div class="navbar-nav">
+        <div class="navbar-nav">
           <a class="nav-link" href="/listings">Explore</a>
-        </div> -->
+        </div> 
         <div class="navbar-nav ms-auto">
           <form class="d-flex" action="/listings/search" method="GET">
             <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" name="title" />
